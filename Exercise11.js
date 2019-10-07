@@ -1,5 +1,5 @@
 function tentukanDeretAritmatika(arr) {
-    var beda = arr.slice(-1).pop() - arr.slice(-2, -1).pop();//Pengurangan array terakhir dengan array kedua terakhir
+    var beda = arr[arr.length-1] - arr[arr.length-2];//Pengurangan array terakhir dengan array kedua terakhir
     var res = true;
   
     for (var i = arr.length-1; i > 0; i--) {
@@ -9,7 +9,7 @@ function tentukanDeretAritmatika(arr) {
     }
     return res;
   }
-  
+
   // TEST CASES
   console.log(tentukanDeretAritmatika([1, 2, 3, 4, 5, 6])); // true
   console.log(tentukanDeretAritmatika([2, 4, 6, 12, 24])); // false
